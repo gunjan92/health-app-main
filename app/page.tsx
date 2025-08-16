@@ -364,7 +364,8 @@ function MeditateSection({ med }: { med: ReturnType<typeof useTimer> }) {
             <li>On low‑motivation days, do 2 mindful minutes. Momentum &gt; perfection.</li>
           </ul>
         </div>
-      </div>
+    </div>
+      <YTPanel topic="meditation" />
     </Section>
   );
 }
@@ -391,7 +392,8 @@ function YogaSection({ yoga }: { yoga: ReturnType<typeof useTimer> }) {
             <li>Prefer a coach? Queue any 5–10 minute mobility video and use this timer.</li>
           </ul>
         </div>
-      </div>
+    </div>
+      <YTPanel topic="yoga" />
     </Section>
   );
 }
@@ -418,7 +420,8 @@ function DanceSection({ dance }: { dance: ReturnType<typeof useTimer> }) {
             <li>End with 4 deep breaths to switch off adrenaline.</li>
           </ul>
         </div>
-      </div>
+    </div>
+      <YTPanel topic="dance" />
     </Section>
   );
 }
