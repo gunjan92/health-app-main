@@ -10,7 +10,6 @@ export async function GET() {
     .toArray();
   const data: Record<string, unknown> = {};
   for (const doc of docs) {
-    // @ts-ignore
     data[doc._id] = doc.value;
   }
   return NextResponse.json(data);
@@ -25,10 +24,6 @@ export async function POST(req: NextRequest) {
   const db = await getDb();
   await db
     .collection<{ _id: string; value: unknown }>("state")
-    .updateOne(
-      { _id: key },
-      { $set: { value } },
-      { upsert: true }
-    );
+    .updateOne({ _id: key }, { $set: { value } }, { upsert: true });
   return NextResponse.json({ ok: true });
 }
